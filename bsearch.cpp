@@ -1,6 +1,6 @@
- // C program to demonstrate delete operation in binary search tree 
-#include<stdio.h> 
-#include<stdlib.h> 
+ // C++ program to demonstrate delete operation in binary search tree 
+#include<bits/stdc++.h>
+using namespace std;
 
 struct node 
 { 
@@ -23,7 +23,7 @@ void inorder(struct node *root)
 	if (root != NULL) 
 	{ 
 		inorder(root->left); 
-		printf("%d ", root->key); 
+		cout<<root->key; 
 		inorder(root->right); 
 	} 
 } 
@@ -124,23 +124,24 @@ int main()
 	root = insert(root, 60); 
 	root = insert(root, 80); 
 
-	printf("Inorder traversal of the given tree \n"); 
+	cout<<"Inorder traversal of the given tree \n"); 
 	inorder(root); 
 
-	printf("\nDelete 20\n"); 
+	cout<<"\nDelete 20\n"; 
 	root = deleteNode(root, 20); 
-	printf("Inorder traversal of the modified tree \n"); 
+	cout<<"Inorder traversal of the modified tree \n"; 
 	inorder(root); 
 
-	printf("\nDelete 30\n"); 
+	cout<<"\nDelete 30\n"; 
 	root = deleteNode(root, 30); 
-	printf("Inorder traversal of the modified tree \n"); 
+	cout<<"Inorder traversal of the modified tree \n"; 
 	inorder(root); 
 
-	printf("\nDelete 50\n"); 
+	cout<<"\nDelete 50\n"; 
 	root = deleteNode(root, 50); 
-	printf("Inorder traversal of the modified tree \n"); 
+	cout<<"Inorder traversal of the modified tree \n"; 
 	inorder(root); 
 
 	return 0; 
 } 
+
